@@ -38,8 +38,6 @@ Converts a character into a numeric cell state.
 | `#` | alive | 1 |
 | `.` | dead | 0 |
 
-Any other character causes a runtime error.
-
 ---
 
 ### `generateGrid :: String -> [[Int]]`
