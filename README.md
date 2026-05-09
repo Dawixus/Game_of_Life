@@ -1,4 +1,4 @@
-# 🧬 Conway's Game of Life (Haskell)
+# 🧬 Conway's Game of Life
 
 This project is an implementation of the classic cellular automaton **Conway's Game of Life** written in **Haskell**.  
 It simulates the evolution of a grid of cells based on a small set of simple rules.
@@ -18,23 +18,47 @@ At each step (generation), the state of the grid updates simultaneously accordin
 
 ## ⚙️ Features
 
-- Grid representation using lists (or other functional structures)
-- Pure functional computation of next generations
-- Custom initial configurations
+- Terminal animation of cellular automaton
+- Load initial state from file
+- Pause / resume simulation (`p`)
+- Quit simulation (`q`)
+- Automatic boundary-safe neighbor calculation
+- Simple and readable grid format (`#` alive, `.` dead)
 
 ---
 
-## 🧠 Concepts Used
+## ⌨️ Controls
 
-- Pure functions and immutability
-- Recursion and higher-order functions (`map`, `filter`)
-- Lazy evaluation and infinite data structures
+While simulation is running:
+
+| Key | Action |
+|-----|--------|
+| `p` | Pause / resume |
+| `q` | Quit simulation |
 
 ---
 
-## ▶️ Running the Project
+## 📃 Input file format
 
-Run directly:
+The grid is stored as plain text:
 
-```bash
-runhaskell Main.hs
+- `#` = alive cell
+- `.` = dead cell
+- All rows must have the same length
+
+### Example
+
+~~~
+.....
+..#..
+...#.
+.###.
+.....
+~~~
+
+---
+
+## ⏯️ How to run
+~~~
+./Main [file name]
+~~~
